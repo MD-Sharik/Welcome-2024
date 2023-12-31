@@ -10,6 +10,22 @@ background: linear-gradient(0deg, rgba(4,0,32,1) 21%, rgba(7,7,7,1) 100%); */
 font-family: 'Poppins', sans-serif;
 height: 200vh;
 }
+body::selection{
+  background: invert;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(229, 229, 229);
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+
 #main{
     height: 100%;
     width: 100%;
@@ -59,18 +75,51 @@ h1{
     opacity: 0;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%,-50%);
 }
 .fireworks2{
     opacity: 0;
     position: fixed;
     top: 50%;
-    left: 30%;
+    left: 20%;
     transform: translate(-50%,-50%);
 }
 
+.footer{
+width: 80%;
+height: 4rem;
+margin: auto;
+border-top: 1px solid white;
+padding: 3rem;
+display: flex;
+justify-content: space-between;
+}
+.footer h2{
+  color: white;
+}
 
+.footer button{
+  background: #070707;
+  border: none;
+  outline: none;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.footer a:link{
+  text-decoration: none;
+  border: none;
+}
+.footer a:visited{
+  text-decoration: none;
+  border: none;
+}
+.footer button img{
+  filter: invert(1);
+}
 
 /* firework */
 
@@ -236,25 +285,22 @@ h1{
         font-size: 18rem;
     }
   }
-  @media (max-width:425px){
+  @media (max-width:680px){
     .container{
-        line-height: 0.4;
-        background: red;
-        height: 10.0rem;    
-        top: 52%;
+        line-height: 1;
+        /* background: rgb(62, 62, 62); */
+        height: 8.0rem; 
     }
     #container2{
         font-size: 1.8rem;
         letter-spacing: 0.1rem;
-        /* position: fixed; */
-        /* background: red; */
         top: 40%;
-        /* left: 50%;
-        transform: translate(-50%,-50%);
-        height: 5rem; */
         line-height: 0;
     }
     #year23, #year24{
         font-size: 8rem;
+    }
+    #year24{
+      margin-top: 13.5rem;
     }
   }

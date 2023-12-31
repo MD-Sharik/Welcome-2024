@@ -6,6 +6,7 @@ const firework = document.querySelector(".fireworks");
 const firework2 = document.querySelector(".fireworks2");
 const main = document.getElementById("main");
 
+
 gsap.registerPlugin(ScrollTrigger)
 gsap.to(year2024,{
     y:-450,
@@ -71,3 +72,4 @@ gsap.to(goodbye,{
         scrub:1,
     }
 })
+
